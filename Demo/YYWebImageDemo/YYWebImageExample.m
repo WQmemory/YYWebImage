@@ -134,7 +134,7 @@
          */
         
         // progressive jpeg
-        @"https://s-media-cache-ak0.pinimg.com/1200x/2e/0c/c5/2e0cc5d86e7b7cd42af225c29f21c37f.jpg",
+        @"https://raw.githubusercontent.com/ibireme/YYWebImage/master/Demo/YYWebImageDemo/mew_progressive.jpg",
         
         // animated gif: http://cinemagraphs.com/
         @"http://i.imgur.com/uoBwCLj.gif",
@@ -192,7 +192,7 @@
 
 - (void)reload {
     [[YYImageCache sharedCache].memoryCache removeAllObjects];
-    [[YYImageCache sharedCache].diskCache removeAllObjectsWithBlock:nil];
+    [[YYImageCache sharedCache].diskCache removeAllObjectsWithBlock:^{}];
     [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.1];
 }
 
